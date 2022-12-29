@@ -1,0 +1,15 @@
+.bg-img {
+  background-image: url("https://img.freepik.com/premium-photo/online-shopping-icon-smart-phone-global-concept_117856-2469.jpg?w=2000");
+
+  min-height: auto;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+}
+
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}

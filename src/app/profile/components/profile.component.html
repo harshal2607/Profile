@@ -1,0 +1,112 @@
+<form [formGroup]="Form" (ngSubmit)="onSubmit()" class="bg-img">
+  <div class="row justify-content-center p-5" style="opacity: 0.9">
+    <div class="col-md-6 card shadow px-3 py-5">
+      <div class="row">
+        <h2 class="d-flex justify-content-center">
+          <Strong>Profile</Strong>
+        </h2>
+        <button
+          style="width: 15%; margin-left: 83%; bottom: 55%; position: relative"
+          routerLink="/profile"
+          class="btn btn-success"
+          [queryParams]="{ EditMode: true }"
+          type="button"
+          (click)="onEdit()"
+        >
+          <i class="fa fa-pencil btn-sm"></i>
+          Edit Profile
+        </button>
+      </div>
+      <div class="col-md-6 d-flex flex-column" style="margin-left: 25%">
+        <div class="form-group">
+          <label>{{ editMode ? "Enter" : "" }} Name : </label>
+          <input
+            disabled
+            *ngIf="!editMode"
+            class="form-control"
+            placeholder="{{ profileInfo.displayName }}"
+          />
+          <input
+            *ngIf="editMode"
+            type="text"
+            class="form-control"
+            formControlName="name"
+          />
+          <div
+            style="color: red"
+            *ngIf="
+              Form.controls['name'].invalid &&
+              Form.controls['name'].errors.required
+            "
+          >
+            Please Enter Your Name
+          </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <label>{{ editMode ? "Enter" : "" }} Email : </label>
+          <input
+            disabled
+            *ngIf="!editMode"
+            type="email"
+            class="form-control"
+            placeholder="{{ profileInfo.email }}"
+          />
+          <input
+            disabled
+            *ngIf="editMode"
+            type="email"
+            class="form-control"
+            placeholder="{{ profileInfo.email }}"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label
+            >{{ editMode ? "Enter Profile Picture URL" : " Profile Picture " }}
+            :
+          </label>
+          <input
+            disabled
+            *ngIf="!editMode"
+            class="form-control"
+            placeholder="{{ profileInfo.imageUrl }}"
+          />
+          <input
+            *ngIf="editMode"
+            type="text"
+            class="form-control"
+            formControlName="picture"
+          />
+          <div
+            style="color: red"
+            *ngIf="
+              Form.controls['picture'].invalid &&
+              Form.controls['picture'].errors.required
+            "
+          >
+            Please Enter imageUrl
+          </div>
+        </div>
+      </div>
+      <div class="btn-row mt-4" *ngIf="editMode">
+        <div class="d-flex flex-row justify-content-center" *ngIf="editMode">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!Form.valid"
+          >
+            Save
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary ms-3"
+            (click)="onCancel()"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

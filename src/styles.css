@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* #auth-bg {
+  background-image: url("https://media.istockphoto.com/id/1312231371/photo/hand-touching-to-virtual-info-graphics-with-trolley-cart-icons-technology-online-shopping.jpg?b=1&s=170667a&w=0&k=20&c=EWXIVYWG_G_9vbdCtQ4R27GZJQ1lyTiF8LPs9jYpddo=");
+
+  min-height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+} */

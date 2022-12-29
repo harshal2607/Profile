@@ -1,0 +1,19 @@
+/* .bg-img {
+  background-image: url("https://bornthinking.com/wp-content/uploads/2022/01/The-Five-Website-Taboos-That-Could-Be-Driving-Your-Visitors-Away.jpg");
+
+  min-height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+} */
+
+.multi-bg-example {
+  width: 100%;
+  height: 600px;
+  background-image: url("https://bornthinking.com/wp-content/uploads/2022/01/The-Five-Website-Taboos-That-Could-Be-Driving-Your-Visitors-Away.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
